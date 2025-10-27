@@ -4,76 +4,60 @@
   <meta charset="UTF-8" />
   <title>Interactive Photo Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-
-</style>
-  <link rel="stylesheet" href="./css/gallery.css">
-  <!-- <link rel="stylesheet" href="css/gallery.css" /> -->
+  <!-- Link CSS (relative path for GitHub Pages project sites) -->
+  <link rel="stylesheet" href="./css/gallery.css" />
 </head>
 <body>
   <header><h1>Gallery</h1></header>
 
-  <main>
+  <main class="gallery-container">
+    <!-- Preview panel -->
     <div id="image" aria-live="polite">
-      Hover over or focus on an image below to display here.
+      Hover over or focus on an image to display it here.
     </div>
 
-    <!--
-      Assignment notes:
-      - Keep onmouseover / onmouseout (mouse)
-      - Add onfocus / onblur (keyboard)
-      - We'll ALSO add tabindex via JS (loop) to show both approaches.
-    -->
+    <!-- Thumbnails grid (side column) -->
+    <div class="thumbs">
+      <!-- Keep mouse events AND add keyboard events inline (assignment requirement) -->
+      <img class="preview"
+           src="https://picsum.photos/id/1015/800/600"
+           alt="Evergreen forest canopy with soft light"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
 
-    <img
-      class="preview"
-      src="images/people-at-a-party.avif"
-      alt="People enjoying a party"
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
+      <img class="preview"
+           src="https://picsum.photos/id/1069/800/600"
+           alt="Sunrise spilling over misty rolling hills"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
 
-    <img
-      class="preview"
-      src="images/tattoo.jpg"
-      alt="tattoo and barber shop exterior, NYC"
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
+      <img class="preview"
+           src="https://picsum.photos/id/1074/800/600"
+           alt="Mirror-still lake reflecting mountains at dusk"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
 
-    <img
-      class="preview"
-      src="images/eastVillageWines.jpg"
-      alt="East Village Wines, exterior, NYC"
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
+      <img class="preview"
+           src="https://picsum.photos/id/1003/800/600"
+           alt="Rocky cliff face above dense green forest"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
 
-    <img
-      class="preview"
-      src="images/graffiti.jpg"
-      alt="Graffiti on a pulldown door reading, where is the real NYC? "
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
+      <img class="preview"
+           src="https://picsum.photos/id/1025/800/600"
+           alt="Close-up portrait of a husky with bright eyes"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
 
-    <img
-      class="preview"
-      src="images/bodega.jpg"
-      alt="interior of a closed bodega at night"
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
-
-    <img
-      class="preview"
-      src="images/ballet.jpg"
-      alt="ballet dancer posing in front of ads in SoHo"
-      onmouseover="upDate(this)" onmouseout="unDo()"
-      onfocus="upDate(this)" onblur="unDo()"
-    />
+      <img class="preview"
+           src="https://picsum.photos/id/237/800/600"
+           alt="Black and white dog looking to the side"
+           onmouseover="upDate(this)" onmouseout="unDo()"
+           onfocus="upDate(this)" onblur="unDo()" />
+    </div>
   </main>
 
-  <script src="js/gallery.js"></script>
+  <!-- JS at the end, with defer -->
+  <script defer src="./js/gallery.js"></script>
 </body>
 </html>
