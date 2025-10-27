@@ -50,6 +50,7 @@ header h1 {
     cursor: pointer;
 }
 
+.preview:hover { border-color: hotpink; }
 
 .preview:focus {
     outline: 3px solid #ff00b7;
