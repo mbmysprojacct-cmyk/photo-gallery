@@ -52,7 +52,7 @@ header h1 {
 
 
 .preview:focus {
-    outline: 3px solid #fff;
+    outline: 3px solid #ff00b7;
     outline-offset: 3px;
 }
 
