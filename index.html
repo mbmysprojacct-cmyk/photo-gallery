@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Photo Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+  <header><h1>Gallery</h1></header>
+
+  <main>
+    <div id="image" aria-live="polite">
+      Hover over or focus on an image below to display here.
+    </div>
+
+    <!--
+      Assignment notes:
+      - Keep onmouseover / onmouseout (mouse)
+      - Add onfocus / onblur (keyboard)
+      - We'll ALSO add tabindex via JS (loop) to show both approaches.
+    -->
+
+    <img
+      class="preview"
+      src="images/people-at-a-party.avif"
+      alt="People enjoying a party"
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+
+    <img
+      class="preview"
+      src="images/tattoo.jpg"
+      alt="tattoo and barber shop exterior, NYC"
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+
+    <img
+      class="preview"
+      src="images/eastVillageWines.jpg"
+      alt="East Village Wines, exterior, NYC"
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+
+    <img
+      class="preview"
+      src="images/graffiti.jpg"
+      alt="Graffiti on a pulldown door reading, where is the real NYC? "
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+
+    <img
+      class="preview"
+      src="images/bodega.jpg"
+      alt="interior of a closed bodega at night"
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+
+    <img
+      class="preview"
+      src="images/ballet.jpg"
+      alt="ballet dancer posing in front of ads in SoHo"
+      onmouseover="upDate(this)" onmouseout="unDo()"
+      onfocus="upDate(this)" onblur="unDo()"
+    />
+  </main>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
